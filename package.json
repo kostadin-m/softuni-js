@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.1.0"
+  },
+  "name": "softuni",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kostadin-m/softuni-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kostadin-m/softuni-js/issues"
+  },
+  "homepage": "https://github.com/kostadin-m/softuni-js#readme",
+  "description": ""
+}
