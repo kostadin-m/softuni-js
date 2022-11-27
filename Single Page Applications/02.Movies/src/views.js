@@ -1,4 +1,3 @@
-import { addMovieForm } from "./addMovie.js";
 import { getMovies } from "./homePage.js";
 import { clearStorage } from "./logout.js";
 

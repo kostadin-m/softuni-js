@@ -1,7 +1,8 @@
-import { editCurrent } from "./editMovie.js";
+import { FormEventListener } from "./editMovie.js";
 import { router } from "./router.js";
 
 const movieDetails = document.querySelector("#movie-example");
+const editForm = document.querySelector("#edit-movie form");
 
 export async function loadDetails(id) {
     movieDetails.style.display = "block";
@@ -39,7 +40,16 @@ function renderDetails(userId, movie, likesCount, likedbyUser) {
         likeButtonElement.addEventListener("click", (e) => likeMovie(e, movie._id));
     } else if (deleteButton && editButton) {
         deleteButton.addEventListener("click", (e) => deleteCurrent(e, movie._id));
-        editButton.addEventListener("click", (e) => editCurrent(e, movie._id));
+        editForm.addEventListener("submit", function submitted(e) {
+            e.preventDefault();
+            FormEventListener(e, movie._id);
+            editForm.removeEventListener("submit", submitted);
+        });
+        editButton.addEventListener("click", function clicked(e) {
+            e.preventDefault();
+            router("/editMovie");
+            editButton.removeEventListener("click", clicked);
+        });
     }
 }
 
