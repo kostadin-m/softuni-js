@@ -1,7 +1,7 @@
 import { router } from "./router.js";
 import { getLogin } from "./login.js";
 import { getRegister } from "./register.js";
-import { addMovieForm } from "./addMovie.js";
+import { addMovieForm } from "./pages/addMovie.js";
 
 const [...aElements] = document.querySelectorAll("nav a");
 aElements.push(document.querySelector("#add-movie-button > a"));

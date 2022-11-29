@@ -1,4 +1,4 @@
-import { router } from "./router.js";
+import { router } from "../router.js";
 
 export async function addMovieForm(e) {
     e.preventDefault();

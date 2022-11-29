@@ -1,3 +1,4 @@
+import { movies } from "../api.js";
 import { loadDetails } from "./details.js";
 import { hideElements } from "./router.js";
 
@@ -14,9 +15,9 @@ export async function getMovies() {
     while (movieList.hasChildNodes()) {
         movieList.removeChild(movieList.lastChild);
     }
-    const request = await fetch("http://localhost:3030/data/movies");
-    const data = await request.json();
-    Object.values(data).forEach((movie) => renderMovies(movie));
+    movies().then((data) => {
+        Object.values(data).forEach((movie) => renderMovies(movie));
+    });
 }
 
 function renderMovies(movie) {

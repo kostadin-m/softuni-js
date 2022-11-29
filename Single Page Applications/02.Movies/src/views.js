@@ -5,19 +5,8 @@ const editMovieElement = document.querySelector(`#edit-movie`);
 const homeElement = document.querySelector("#home-page");
 const loginElement = document.querySelector("#form-login");
 const registerElement = document.querySelector("#form-sign-up");
-const [...guestElements] = document.querySelectorAll(".nav-item-guest");
-const userElement = document.querySelector(".nav-item-user");
-const addMovieElement = document.querySelector("#add-movie");
 
-export function renderNav() {
-    if (sessionStorage.getItem("id")) {
-        userElement.style.display = "block";
-        guestElements.forEach((el) => (el.style.display = "none"));
-    } else {
-        guestElements.forEach((el) => (el.style.display = "block"));
-        userElement.style.display = "none";
-    }
-}
+const addMovieElement = document.querySelector("#add-movie");
 
 export function renderHome() {
     homeElement.style.display = "block";
