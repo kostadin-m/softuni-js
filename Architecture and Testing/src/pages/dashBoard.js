@@ -12,7 +12,7 @@ export function showDashBoard() {
         emptyElement.style.display = "inline";
     }
     dashBoard.style.display = "inline-block";
-    getIdeas().then((data) => Object.values(data).forEach((idea) => renderIdeas(idea)));
+    getIdeas().then((data) => Object.values(data).forEach((idea) => idea));
 }
 
 function renderIdeas(idea) {
